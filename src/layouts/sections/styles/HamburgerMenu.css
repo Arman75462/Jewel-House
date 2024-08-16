@@ -35,9 +35,9 @@
 }
 
 .HamburgerMenu__icon span {
-  border: 0.11em solid black;
+  border: 0.11em solid #f6dc9c;
   border-radius: var(--hamburger-icon-span-border-radius);
-  box-shadow: 0 0 0.5em black, 0 0 1.5em black;
+  box-shadow: 0 0 0.5em #f6dc9c, 0 0 1.5em #f6dc9c;
   display: block;
   height: var(--hamburger-icon-span-height);
   position: absolute;

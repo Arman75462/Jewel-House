@@ -24,7 +24,7 @@ export default function Header() {
 
   return (
     <header className="Header">
-      <p className="Header__initials">Jewel House</p>
+      <h1 className="Header__title">Jewel House</h1>
 
       {isScreenLarge ? (
         <Navigation
