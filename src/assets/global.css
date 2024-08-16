@@ -1,5 +1,3 @@
-/* Your Google Font */
-
 /*============================
 RESETS=====================
 ==============================*/
@@ -78,8 +76,7 @@ select {
 button {
   border: none;
   border-radius: 1em;
-  transition: opacity 300ms, scale 300ms, box-shadow 300ms;
-  box-shadow: 0.3em 0.3em 0.6em rgba(0, 0, 0, 0.3);
+  transition: opacity 300ms, scale 300ms;
 }
 
 /* Reset focus styles */
@@ -87,7 +84,6 @@ button:is(:hover, :focus) {
   opacity: 0.8;
   scale: 1.03;
   outline-color: black;
-  box-shadow: 0.3em 0.3em 0.6em rgba(0, 0, 0, 0.6);
 }
 
 /* Normalize link styles for a clean slate */
@@ -111,3 +107,17 @@ GENERAL STYLES================
 /*============================
 ANIMATIONS====================
 ==============================*/
+@keyframes flipBounce {
+  from {
+    transform: perspective(75vw) rotateY(-90deg) scale(0.8); /* Start rotated and scaled down */
+    opacity: 0; /* Start invisible */
+  }
+  50% {
+    transform: perspective(75vw) rotateY(0deg) scale(1.1); /* Bounce effect */
+    opacity: 1; /* Fade in */
+  }
+  to {
+    transform: perspective(75vw) rotateY(0deg) scale(1); /* End at normal size and rotation */
+    opacity: 1; /* Fully visible */
+  }
+}

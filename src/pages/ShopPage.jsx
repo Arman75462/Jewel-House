@@ -1,3 +1,5 @@
+import "./styles/ShopPage.css";
+
 export default function ShopPage() {
-  return <p>Shop page</p>;
+  return <section>Shop page</section>;
 }

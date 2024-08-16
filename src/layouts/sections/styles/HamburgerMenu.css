@@ -1,0 +1,84 @@
+.HamburgerMenu {
+  /* HamburgerMenu variables */
+  --HamburgerMenu-width: 2.5em; /* ONLY NEED TO CHANGE WRAPPER HEIGHT AND WIDTH */
+  --HamburgerMenu-height: 2.5em;
+  --icon-width: calc(var(--HamburgerMenu-width) * 0.6);
+  --icon-height: calc(var(--HamburgerMenu-height) * 0.5);
+  --hamburger-icon-span-height: calc(var(--HamburgerMenu-height) * 0.07);
+  --hamburger-icon-span-border-radius: calc(var(--HamburgerMenu-height) * 0.1);
+  --HamburgerMenu-span1-translateY: calc(var(--HamburgerMenu-height) * 0.19);
+  --HamburgerMenu-span3-bottom: calc(var(--HamburgerMenu-height) * 0.23);
+  --HamburgerMenu-border-radius: calc(var(--HamburgerMenu-height) * 0.2);
+
+  border-radius: var(--HamburgerMenu-border-radius);
+  cursor: pointer;
+  background-color: transparent;
+
+  /* To center the HamburgerMenu__icon */
+  display: flex;
+  height: var(--HamburgerMenu-height);
+  width: var(--HamburgerMenu-width);
+}
+
+.HamburgerMenu__icon {
+  align-items: center;
+  display: flex;
+  height: var(--icon-height);
+  margin: auto;
+  transform: rotate(0);
+  transition: all 0.5s;
+  width: var(--icon-width);
+}
+
+.HamburgerMenu.active .HamburgerMenu__icon {
+  transform: rotate(315deg);
+}
+
+.HamburgerMenu__icon span {
+  border: 0.11em solid black;
+  border-radius: var(--hamburger-icon-span-border-radius);
+  box-shadow: 0 0 0.5em black, 0 0 1.5em black;
+  display: block;
+  height: var(--hamburger-icon-span-height);
+  position: absolute;
+  transition: all 0.3s;
+}
+
+.HamburgerMenu__icon span:first-child {
+  left: 0;
+  top: 0;
+  transform: translateY(0);
+  width: 50%;
+}
+
+.HamburgerMenu__icon span:nth-child(2) {
+  opacity: 1;
+  transform: scaleX(1);
+  width: 100%;
+}
+
+.HamburgerMenu.active span:first-child {
+  transform: translateY(var(--HamburgerMenu-span1-translateY));
+  transition-delay: 0s;
+  width: 100%;
+}
+
+.HamburgerMenu.active span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+  transition-delay: 0s;
+}
+
+.HamburgerMenu__icon span:nth-child(3) {
+  bottom: 0;
+  right: 0;
+  transform: rotate(0);
+  width: 50%;
+}
+
+.HamburgerMenu.active span:nth-child(3) {
+  bottom: var(--HamburgerMenu-span3-bottom);
+  transform: rotate(90deg);
+  transition-delay: 0s;
+  width: 100%;
+}

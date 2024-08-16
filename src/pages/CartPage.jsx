@@ -1,3 +1,5 @@
+import "./styles/CartPage.css";
+
 export default function CartPage() {
-  return <p>Cart page</p>;
+  return <section>Cart page</section>;
 }

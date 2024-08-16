@@ -1,3 +1,5 @@
+import "./styles/HomePage.css";
+
 export default function HomePage() {
-  return <p>Home page</p>;
+  return <main className="HomePage">Home page</main>;
 }

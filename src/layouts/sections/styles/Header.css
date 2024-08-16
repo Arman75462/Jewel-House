@@ -1,0 +1,18 @@
+.Header {
+  /* To ensure it's above everything else */
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0.5em max(7vw, 1em);
+  font-size: clamp(1.5rem, 2vw, 50rem);
+
+  /* Box shadow for the bottom */
+  box-shadow: 0 0.1em 0.25em blue;
+  background: orange;
+}
+
+.Header__initials {
+  font-size: clamp(2.25rem, 3vw, 30rem);
+}

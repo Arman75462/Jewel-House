@@ -1,0 +1,7 @@
+.HomePage {
+  background-image: url("/src/assets/homepageImage.webp");
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex-grow: 1;
+}
