@@ -123,3 +123,16 @@ ANIMATIONS====================
     opacity: 1; /* Fully visible */
   }
 }
+
+@keyframes pageAppearanceAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.page-appearance-animation {
+  animation: pageAppearanceAnimation 1s ease-out forwards;
+}

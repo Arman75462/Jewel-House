@@ -1,5 +1,9 @@
 import "./styles/AboutPage.css";
 
 export default function AboutPage() {
-  return <section>About page</section>;
+  return (
+    <section className="AboutPage page-appearance-animation">
+      About page
+    </section>
+  );
 }
