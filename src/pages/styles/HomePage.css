@@ -5,3 +5,13 @@
   background-repeat: no-repeat;
   flex-grow: 1;
 }
+
+.HomePage__title {
+  font-size: clamp(4rem, 6vw, 50rem);
+  color: var(--text-color);
+
+  max-width: 50%;
+  line-height: 0.9;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}

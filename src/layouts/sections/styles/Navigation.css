@@ -29,7 +29,7 @@
   position: relative;
 
   text-transform: uppercase;
-  color: #eeeeee;
+  color: var(--text-color);
 }
 
 .Navigation__link:before {
@@ -42,8 +42,8 @@
   transform: scaleY(2);
 
   transition: all 0.5s;
-  border-bottom: 0.1vw solid #eeeeee;
-  border-top: 0.1vw solid #eeeeee;
+  border-bottom: 0.1vw solid var(--text-color);
+  border-top: 0.1vw solid var(--text-color);
   opacity: 0;
 }
 

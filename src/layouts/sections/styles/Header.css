@@ -9,11 +9,12 @@
   font-size: clamp(1.5rem, 2vw, 50rem);
 
   /* Box shadow for the bottom */
-  box-shadow: 0 0.1em 0.25em #f6dc9c;
+  box-shadow: 0 0.1em 0.25em var(--cta-color);
   background: #141414;
 }
+
 .Header__title {
-  font-size: clamp(2.25rem, 3vw, 30rem);
-  color: #f6dc9c;
+  font-size: clamp(2rem, 2.25vw, 30rem);
+  color: var(--cta-color);
   font-weight: lighter;
 }
