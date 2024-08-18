@@ -81,14 +81,10 @@ select {
 
 button {
   border: none;
-  border-radius: 1em;
-  transition: opacity 300ms, scale 300ms;
 }
 
 /* Reset focus styles */
 button:is(:hover, :focus) {
-  opacity: 0.8;
-  scale: 1.03;
   outline-color: black;
 }
 
@@ -112,11 +108,21 @@ GENERAL STYLES================
 :root {
   --text-color: #eeeeee;
   --cta-color: #f6dc9c;
+  --dark-background: #141414;
+  --golden-background: rgba(246, 221, 156, 0.7);
 }
 
 .page-container {
   width: 80%;
   margin: 0 auto;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-weight: bolder;
 }
 
 /*============================

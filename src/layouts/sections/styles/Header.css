@@ -10,7 +10,7 @@
 
   /* Box shadow for the bottom */
   box-shadow: 0 0.1em 0.25em var(--cta-color);
-  background: #141414;
+  background-color: var(--dark-background);
 }
 
 .Header__title {

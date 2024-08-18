@@ -1,0 +1,29 @@
+.ErrorPage {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--golden-background);
+  text-align: center;
+}
+
+.ErrorPage__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 700px;
+  gap: 0.75em;
+  padding: 2em 2em;
+  font-size: clamp(1.25rem, 2vw, 50rem);
+
+  background-color: var(--dark-background);
+  color: var(--text-color);
+  border-radius: 1em;
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.3), 0 1em 2em rgba(0, 0, 0, 0.2);
+}
+
+.ErrorPage__cta-message {
+  margin-bottom: 2em;
+}
