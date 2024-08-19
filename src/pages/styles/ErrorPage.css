@@ -1,11 +1,10 @@
 .ErrorPage {
   min-height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
 
-  background-color: var(--golden-background);
   text-align: center;
+  background-color: var(--golden-background);
 }
 
 .ErrorPage__container {
