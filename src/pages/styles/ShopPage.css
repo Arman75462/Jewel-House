@@ -1,0 +1,17 @@
+.ShopPage__error-container {
+  max-width: 700px;
+  padding: 3em 3em;
+  font-size: clamp(1.1rem, 1.5vw, 50rem);
+  width: 80%;
+  margin: 5em auto;
+
+  background-color: var(--dark-background);
+  color: var(--text-color);
+  border-radius: 1em;
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.3), 0 1em 2em rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.ShopPage__error-message-intro {
+  margin-bottom: 1.25em;
+}

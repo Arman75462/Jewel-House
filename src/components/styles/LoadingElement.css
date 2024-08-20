@@ -1,0 +1,29 @@
+.LoadingElement-wrapper {
+  position: absolute; /* or fixed, depending on your use case */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: clamp(3rem, 4vw, 30rem);
+}
+
+.LoadingElement {
+  height: 1.5em;
+  width: 1.5em;
+
+  border: 0.1em solid var(--dark-background); /* Border color is the loading circle color */
+  border-top: 0.1em solid transparent; /* Make top transparent to create the loading effect */
+  border-radius: 50%;
+  animation: rotateLoadingElement 1.2s cubic-bezier(0.68, -0.55, 0.27, 1.55)
+    infinite;
+}
+
+@keyframes rotateLoadingElement {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
