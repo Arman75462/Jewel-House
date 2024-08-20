@@ -1,3 +1,11 @@
+.ShopPage__JewelryCard-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3em;
+  padding-block: 3em;
+}
+
 .ShopPage__error-container {
   max-width: 700px;
   padding: 3em 3em;
@@ -14,4 +22,16 @@
 
 .ShopPage__error-message-intro {
   margin-bottom: 1.25em;
+}
+
+.ShopPage__title {
+  max-width: 85%;
+  margin: 1.5em auto;
+  font-size: clamp(3rem, 5.5vw, 50rem);
+  padding-bottom: 0.4em;
+
+  line-height: 0.95;
+  text-align: center;
+  border-bottom: 0.1em solid;
+  border-image: linear-gradient(to right, #ff7e5f, #feb47b) 1;
 }

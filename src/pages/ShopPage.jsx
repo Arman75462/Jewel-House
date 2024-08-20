@@ -49,11 +49,20 @@ export default function ShopPage() {
 
   return (
     <section className="ShopPage page-appearance-animation">
-      <h2>Shop page</h2>
-      <JewelryCard
-        imageSrc={jewelryArrayData[0].image}
-        cardTitle={jewelryArrayData[0].title}
-      />
+      <div className="page-container">
+        <h2 className="ShopPage__title">
+          Timeless Elegance: Shop Our Jewelry Collection
+        </h2>
+        <div className="ShopPage__JewelryCard-container">
+          {jewelryArrayData.map((jewelry) => (
+            <JewelryCard
+              imageSrc={jewelry.image}
+              cardTitle={jewelry.title}
+              key={jewelry.id}
+            />
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
