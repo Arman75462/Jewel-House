@@ -9,11 +9,10 @@ export default function ShopPage() {
   const [loadingState, setLoadingState] = useState(true);
 
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products/category/jewelery")
+    fetch("https://fakestoreapi.com/products/category")
       .then((APIresponse) => {
         if (APIresponse.status >= 400) {
-          setErrorState(true); // Set the error state and reject the promise
-          return Promise.reject("Server error"); // Reject the promise to skip the following then blocks
+          throw new Error(`Server error: ${APIresponse.status}`);
         }
         return APIresponse.json();
       })
@@ -28,10 +27,10 @@ export default function ShopPage() {
   }, []);
 
   // Show loading spinner while data is being fetched
-  if (loadingState === true) return <LoadingElement />;
+  if (loadingState) return <LoadingElement />;
 
   // Display error message if there was an issue with the fetch
-  if (errorState === true)
+  if (errorState)
     return (
       <div className=" ShopPage__error-container">
         <p className="ShopPage__error-message-intro">
@@ -44,8 +43,6 @@ export default function ShopPage() {
         </p>
       </div>
     );
-
-  console.log(jewelryArrayData);
 
   return (
     <section className="ShopPage page-appearance-animation">

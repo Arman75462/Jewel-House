@@ -33,5 +33,10 @@
   line-height: 0.95;
   text-align: center;
   border-bottom: 0.1em solid;
-  border-image: linear-gradient(to right, #ff7e5f, #feb47b) 1;
+  border-image: linear-gradient(
+      to right,
+      var(--golden-background),
+      var(--dark-background)
+    )
+    1;
 }
