@@ -79,6 +79,7 @@
 
   background-color: var(--cta-color);
   border-radius: 50%;
+  color: var(--dark-background);
   /* Adjust as needed for content size */
   font-size: 0.7em;
 }

@@ -3,6 +3,7 @@ import CartPage from "/src/pages/CartPage.jsx";
 import HomePage from "/src/pages/HomePage.jsx";
 import ShopPage from "/src/pages/ShopPage.jsx";
 import ErrorPage from "/src/pages/ErrorPage.jsx";
+import JewelryInfoPage from "/src/pages/JewelryInfoPage.jsx";
 import PagesLayout from "/src/layouts/PagesLayout.jsx";
 
 const routes = [
@@ -15,6 +16,7 @@ const routes = [
       { path: "about", element: <AboutPage /> },
       { path: "cart", element: <CartPage /> },
       { path: "shop", element: <ShopPage /> },
+      { path: "shop/:jewelryId", element: <JewelryInfoPage /> },
     ],
   },
 ];
