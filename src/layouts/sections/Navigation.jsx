@@ -5,13 +5,7 @@ import shoppingBagIcon from "/src/assets/shoppingBagIcon.webp";
 import { ItemsInCartDataContext } from "/src/contexts/ItemsInCartDataContext.jsx";
 
 export default function Navigation({ className, handleHamburgerMenuClick }) {
-  const { itemsInCartData } = useContext(ItemsInCartDataContext);
-
-  // Calculate the total item count using reduce
-  const totalItemsInCart = Object.values(itemsInCartData).reduce(
-    (acc, item) => acc + item.itemCount,
-    0
-  );
+  const { totalItemsInCart } = useContext(ItemsInCartDataContext);
 
   return (
     <nav className="Navigation">

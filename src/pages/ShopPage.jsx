@@ -18,7 +18,7 @@ export default function ShopPage() {
       setLoadingState(false);
     } else {
       // Fetch data from API and cache it
-      fetch("https://fakestoreapi.com/products/category/jewelery")
+      fetch("https://fakestoreapi.com/products")
         .then((APIresponse) => {
           if (APIresponse.status >= 400) {
             throw new Error(`Server error: ${APIresponse.status}`);

@@ -19,9 +19,15 @@ export default function ItemsInCartDataProvider({ children }) {
     });
   }
 
+  // Calculate the total item count using reduce
+  const totalItemsInCart = Object.values(itemsInCartData).reduce(
+    (acc, item) => acc + item.itemCount,
+    0
+  );
+
   return (
     <ItemsInCartDataContext.Provider
-      value={{ itemsInCartData, updateItemCount }}
+      value={{ itemsInCartData, updateItemCount, totalItemsInCart }}
     >
       {children}
     </ItemsInCartDataContext.Provider>

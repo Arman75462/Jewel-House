@@ -1,4 +1,140 @@
+.CartPage {
+  padding-bottom: 5em;
+}
 
+.CartPage__title {
+  font-size: 2rem;
+  margin-block: 2em;
 
+  font-family: "Montserrat", sans-serif;
+}
 
+.CartPage__flex-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5em;
+}
 
+.CartPage__button {
+  transition: opacity 300ms;
+  background-color: var(--dark-background);
+  color: var(--text-color);
+}
+
+.CartPage__button:hover {
+  opacity: 0.75;
+}
+
+/* CART-ITEMS */
+.CartPage__cart-items {
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 2em;
+  padding-top: 2em;
+
+  border-top: 0.05em solid black;
+}
+
+.CartPage__item-image {
+  width: 80%;
+  margin: 0 auto;
+  aspect-ratio: 1 / 1;
+
+  border-radius: 0.5em;
+}
+
+.CartPage__item-title {
+  font-weight: bold;
+}
+
+.CartPage__item-qty {
+  font-size: 0.8rem;
+}
+
+.CartPage__update-item-count-container {
+  display: inline-flex;
+  gap: 0.75em;
+}
+
+.CartPage__button--item-quantity {
+  display: flex; /* To center the  plus and minus signs */
+  align-items: center;
+  justify-content: center;
+  height: 1.25em;
+  width: 1.25em;
+
+  font-size: 1.25rem;
+  border-radius: 0.2em;
+}
+
+/* ORDER-SUMMARY */
+.CartPage__order-summary {
+  padding: 2em;
+
+  border: 0.05em solid var(--dark-background);
+  border-radius: 0.5em;
+}
+
+.CartPage__summary-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+
+  border-bottom: 1px solid var(--dark-background);
+}
+
+.CartPage__order-summary-title {
+  font-size: 1.5rem;
+}
+
+.CartPage__subtotal-container,
+.CartPage__tax-container,
+.CartPage__total-price-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+}
+
+.CartPage__summary-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.CartPage__button--checkout {
+  padding: 0.75em 2em;
+
+  border-radius: 0.5em;
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  .CartPage__cart-items {
+    flex-wrap: nowrap;
+  }
+
+  .CartPage__item-image {
+    width: 30%;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1100px) {
+  .CartPage__flex-container {
+    flex-direction: row;
+    justify-content: flex-end;
+    position: relative;
+  }
+
+  .CartPage__order-summary {
+    align-self: flex-start;
+    position: sticky;
+    top: 7em;
+    width: 60%;
+  }
+}
