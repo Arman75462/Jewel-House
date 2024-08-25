@@ -2,6 +2,8 @@
   /* To ensure it's above everything else */
   z-index: 1000;
   display: flex;
+  position: sticky;
+  top: 0;
   justify-content: space-between;
   align-items: center;
 
@@ -15,6 +17,7 @@
 
 .Header__title {
   font-size: clamp(2rem, 2.25vw, 30rem);
+
   color: var(--cta-color);
   font-weight: lighter;
 }

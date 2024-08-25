@@ -1,0 +1,83 @@
+.JewelryInfoPage__go-back-link {
+  display: inline-block;
+  margin-block: 2em;
+
+  text-decoration: underline;
+  color: var(--dark-background);
+  transition: all 300ms;
+}
+
+.JewelryInfoPage__go-back-link:hover {
+  opacity: 0.5;
+}
+
+.JewelryInfoPage__item-image {
+  max-height: 28em;
+  margin-bottom: 2em;
+
+  border-radius: 0.5em;
+}
+
+.JewelryInfoPage__item-title {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  margin-bottom: 1em;
+}
+
+.JewelryInfoPage__item-price {
+  font-style: italic;
+  margin-bottom: 0.25em;
+}
+
+.JewelryInfoPage__item-quantity-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75em;
+}
+
+.JewelryInfoPage__item-description {
+  margin-block: 2em;
+}
+
+.JewelryInfoPage__button {
+  transition: opacity 300ms;
+  background-color: var(--dark-background);
+  color: var(--text-color);
+}
+
+.JewelryInfoPage__button:hover {
+  opacity: 0.75;
+}
+
+.JewelryInfoPage__button--item-quantity {
+  display: flex; /* To center the  plus and minus signs */
+  align-items: center;
+  justify-content: center;
+  height: 1.25em;
+  width: 1.25em;
+
+  font-size: 1.25rem;
+  border-radius: 0.2em;
+}
+
+.JewelryInfoPage__button--go-to-cart-button {
+  display: inline-block;
+  margin-bottom: 5em;
+  padding: 1em 2em;
+
+  border-radius: 0.5em;
+}
+
+.JewelryInfoPage__flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 850px) {
+  .JewelryInfoPage__flex-container {
+    flex-direction: row;
+    justify-content: center;
+    gap: 5em;
+  }
+}

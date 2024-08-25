@@ -5,7 +5,12 @@ import shoppingBagIcon from "/src/assets/shoppingBagIcon.webp";
 import { ItemCountContext } from "/src/contexts/ItemCountContext.jsx";
 
 export default function Navigation({ className, handleHamburgerMenuClick }) {
-  const { itemCount } = useContext(ItemCountContext);
+  const { itemsCount } = useContext(ItemCountContext);
+
+  const totalItemsInCart = Object.values(itemsCount).reduce(
+    (acc, curr) => acc + curr,
+    0
+  );
 
   return (
     <nav className="Navigation">
@@ -47,11 +52,11 @@ export default function Navigation({ className, handleHamburgerMenuClick }) {
           </NavLink>
         </li>
         <li className="Navigation__item">
-          <NavLink to="/cart">
+          <NavLink to="/cart" onClick={handleHamburgerMenuClick}>
             {/* Div contains the image, because images cannot have ::after and ::before pseudo-elements */}
             <div
               className="Navigation__shopping-bag-container"
-              style={{ "--item-count": `"${itemCount}"` }}
+              style={{ "--totalItemsInCart": `"${totalItemsInCart}"` }}
             >
               <img
                 src={shoppingBagIcon}

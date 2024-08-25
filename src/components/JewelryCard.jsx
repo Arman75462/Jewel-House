@@ -5,7 +5,7 @@ export default function JewelryCard({ cardTitle, imageSrc, jewelryCardId }) {
   return (
     <div className="JewelryCard">
       <img src={imageSrc} alt="wait" className="JewelryCard__image" />
-      <p className="JewelryCard__title">{cardTitle}</p>
+      <h3 className="JewelryCard__title">{cardTitle}</h3>
       <Link
         to={`/shop/${jewelryCardId}`}
         className="JewelryCard__more-info-link"
