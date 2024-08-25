@@ -2,13 +2,14 @@ import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import "./styles/Navigation.css";
 import shoppingBagIcon from "/src/assets/shoppingBagIcon.webp";
-import { ItemCountContext } from "/src/contexts/ItemCountContext.jsx";
+import { ItemsInCartDataContext } from "/src/contexts/ItemsInCartDataContext.jsx";
 
 export default function Navigation({ className, handleHamburgerMenuClick }) {
-  const { itemsCount } = useContext(ItemCountContext);
+  const { itemsInCartData } = useContext(ItemsInCartDataContext);
 
-  const totalItemsInCart = Object.values(itemsCount).reduce(
-    (acc, curr) => acc + curr,
+  // Calculate the total item count using reduce
+  const totalItemsInCart = Object.values(itemsInCartData).reduce(
+    (acc, item) => acc + item.itemCount,
     0
   );
 

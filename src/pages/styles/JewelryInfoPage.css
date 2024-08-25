@@ -12,6 +12,7 @@
 }
 
 .JewelryInfoPage__item-image {
+  max-width: 28em;
   max-height: 28em;
   margin-bottom: 2em;
 
@@ -74,7 +75,7 @@
   align-items: center;
 }
 
-@media (min-width: 850px) {
+@media (min-width: 950px) {
   .JewelryInfoPage__flex-container {
     flex-direction: row;
     justify-content: center;

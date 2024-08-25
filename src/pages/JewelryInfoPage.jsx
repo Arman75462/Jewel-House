@@ -2,10 +2,12 @@ import "./styles/JewelryInfoPage.css";
 import { useContext, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import LoadingElement from "../components/LoadingElement.jsx";
-import { ItemCountContext } from "/src/contexts/ItemCountContext.jsx";
+import { ItemsInCartDataContext } from "/src/contexts/ItemsInCartDataContext.jsx";
 
 export default function JewelryInfoPage() {
-  const { itemsCount, updateItemCount } = useContext(ItemCountContext);
+  const { itemsInCartData, updateItemCount } = useContext(
+    ItemsInCartDataContext
+  );
   const { jewelryId } = useParams();
 
   // Get data directly from sessionStorage once
@@ -18,8 +20,8 @@ export default function JewelryInfoPage() {
     (item) => item.id === Number(jewelryId)
   );
 
-  // Get the item count for this specific jewelry item from the context
-  const itemCount = itemsCount[jewelryId] || 0; // Default to 0 if undefined
+  // Get the item count and details for this specific jewelry item from the context
+  const itemData = itemsInCartData[jewelryId] || { itemCount: 0 };
 
   // Scroll to top when the component mounts
   useEffect(() => {
@@ -30,7 +32,6 @@ export default function JewelryInfoPage() {
     <div className="JewelryInfoPage">
       {jewelryArrayData ? (
         <div className="page-container">
-          {" "}
           <Link to="/shop" className="JewelryInfoPage__go-back-link">
             Go Back
           </Link>
@@ -44,15 +45,22 @@ export default function JewelryInfoPage() {
                 <button
                   className="JewelryInfoPage__button JewelryInfoPage__button--item-quantity"
                   onClick={() =>
-                    updateItemCount(jewelryId, Math.max(itemCount - 1, 0))
+                    updateItemCount(
+                      jewelry,
+                      Math.max(itemData.itemCount - 1, 0)
+                    )
                   }
                 >
                   -
                 </button>
-                <p className="JewelryInfoPage__item-quantity">{itemCount}</p>
+                <p className="JewelryInfoPage__item-quantity">
+                  {itemData.itemCount}
+                </p>
                 <button
                   className="JewelryInfoPage__button JewelryInfoPage__button--item-quantity"
-                  onClick={() => updateItemCount(jewelryId, itemCount + 1)}
+                  onClick={() =>
+                    updateItemCount(jewelry, itemData.itemCount + 1)
+                  }
                 >
                   +
                 </button>

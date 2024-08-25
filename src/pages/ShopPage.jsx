@@ -4,7 +4,7 @@ import JewelryCard from "../components/JewelryCard.jsx";
 import "./styles/ShopPage.css";
 
 export default function ShopPage() {
-  const [jewelryArrayData, setJewelryArrayData] = useState();
+  const [jewelryArrayData, setJewelryArrayData] = useState([]);
   const [errorState, setErrorState] = useState(null);
   const [loadingState, setLoadingState] = useState(true);
 

@@ -1,15 +1,15 @@
 import { Outlet } from "react-router-dom";
 import Header from "./sections/Header.jsx";
-import ItemCountProvider from "/src/contexts/ItemCountContext.jsx";
+import ItemsInCartDataProvider from "/src/contexts/ItemsInCartDataContext.jsx";
 import "./styles/PagesLayout.css";
 
 export default function PagesLayout() {
   return (
     <div className="PagesLayout">
-      <ItemCountProvider>
+      <ItemsInCartDataProvider>
         <Header />
         <Outlet />
-      </ItemCountProvider>
+      </ItemsInCartDataProvider>
     </div>
   );
 }
